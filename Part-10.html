@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-US" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Js Bangla Tutorial</title>
+	<style>
+	</style>
+
+</head>
+<body>
+	<div id="root">
+		<h1>{{ today | bdFormat }}</h1>
+	</div>
+
+	<script type="text/javascript" src="vue.js" ></script>
+	<script type="text/javascript">
+		Vue.filter("lower", function (s) {
+			return s.toLowerCase();
+        })
+		
+	 var app= new Vue({
+		el:  "#root",
+		data:{
+			name: "Syed Zaman Mostafiz",
+			profession: "Software Engineer",
+			today: new Date()
+		},
+		filters:{
+			upper: function(s){
+				return s.toUpperCase();
+			},
+            bdFormat: function (d) {
+                return d.getUTCDate() + "-" + (d.getUTCMonth()+1) + "-" + d.getUTCFullYear();
+            }
+		}
+
+     });
+
+	</script>
+	<a href="Part-11.html">Part-11</a>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en-US" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Js Bangla Tutorial</title>
+	<style>
+	</style>
+
+</head>
+<body>
+	<div id="root">
+		<h1>All Payments</h1><hr>
+		<p v-for="(payment, i) in payments">
+			{{payment.name}} ({{payment.amount}})
+		</p>
+		<h1>Unpaid Payments</h1><hr>
+		<p v-for="(payment, i) in unpaidPayments">
+			{{payment.name}} ({{payment.amount}})
+		</p>
+		<h1>Total Amount = {{totalAmount}}</h1>
+	</div>
+
+	<script type="text/javascript" src="vue.js" ></script>
+	
+	<script type="text/javascript">
+	 var app= new Vue({
+		el:  "#root",
+		data:
+			{
+			    payments:[
+					{name: "houserent", amount: 15000, paid: true},
+					{name: "electricity", amount: 1000, paid: false},
+					{name: "gas", amount: 800, paid: true},
+					{name: "water", amount: 700, paid: false},
+					{name: "net", amount: 600, paid: false},
+				]
+			},
+			computed:{
+		    	unpaidPayments: function () {
+					return this.payments.filter(function (p) {
+						return !p.paid;
+                    });
+                },
+				totalAmount: function () {
+					var sum = 0;
+					for (var i =0; i < this.payments.length; i++)
+					{
+					    sum += this.payments[i].amount;
+					}
+					return sum;
+                }
+			}
+     });
+
+	</script>
+	<a href="Part-10.html">Part-10</a>
+
+</body>
+</html>

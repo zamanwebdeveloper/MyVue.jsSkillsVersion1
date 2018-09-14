@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Js Bangla Tutorial</title>
+	<style>
+	</style>
+
+</head>
+<body>
+	<div id="root">
+		<h1>Skills</h1><hr>
+        <p v-if="show">
+            Showing
+        </p>
+        <p v-else>
+            Not Showing
+        </p>
+	</div>
+
+	<script type="text/javascript" src="vue.js" ></script>
+	
+	<script type="text/javascript">
+	 var app= new Vue({
+		el:  "#root",
+		data: {
+		    show: true
+		}
+	 });
+
+	</script>
+	<a href="Part-08.html">Part-08</a>
+
+</body>
+</html>

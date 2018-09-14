@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Js Bangla Tutorial</title>
+</head>
+<body>
+	<div id="root">
+		<p> Enter Your Name </p>
+		<input type="text" id="name" onkeyup="change()" >
+		<br>
+		<h1 id="output">Your name is </h1>
+	</div>
+
+	<script type="text/javascript" src="vue.js" ></script>
+	
+	<script type="text/javascript">
+	 // var app= new Vue({
+		// el:  "#root",
+		// data: {
+		// 	name: "Syed Zaman Mostafiz"
+		// }
+	 // });
+        var data = {name: "Syed Zaman"};
+        document.getElementById("name").value = data.name;
+        document.getElementById("output").innerHTML = "Your name is " +  data.name;
+        function change() {
+            data.name = document.getElementById("name").value;
+            document.getElementById("output").innerHTML = "Your name is " +  data.name;
+        }
+	</script>
+	<a href="Part-04.3.html">Part-04.3</a>
+
+</body>
+</html>

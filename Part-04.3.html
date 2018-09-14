@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Js Bangla Tutorial</title>
+</head>
+<body>
+	<div id="root">
+		<p> Enter Your Name </p>
+		<input type="text" id="name" v-model="name" >
+		<br>
+		<h1 id="output">Your name is {{ name }} </h1>
+	</div>
+
+	<script type="text/javascript" src="vue.js" ></script>
+	
+	<script type="text/javascript">
+	 var app= new Vue({
+		el:  "#root",
+		data: {
+			name: "Syed Zaman Mostafiz"
+		},
+		 mounted: function () {
+			 console.log("Mounted");
+         }
+	 });
+
+	</script>
+	<a href="Part-05.html">Part-05</a>
+
+</body>
+</html>
