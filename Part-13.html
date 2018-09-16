@@ -1,61 +1,63 @@
-<!DOCTYPE HTML>
-<html lang="en-US" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="UTF-8">
 	<title>Vue Js Bangla Tutorial</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-
 </head>
 <body>
 
-	<div id="root">
-		<button @click="showLogin = true">Login</button>
-		<modal v-if="showLogin" @onsave="showLogin=false">
-			<template slot="header">
-				This is Model Header.
-			</template>
-			<template slot="body">
-				<h1>Enter your name</h1>
-				<input type="text" name="">
-			</template>
-		</modal>
+<div id="root">
+
+	<tabs>
+		<tab name="Tab1" :selected="true">
+			Tab1 content... <button>btn1</button>
+		</tab>
+		<tab name="Tab2">
+			Tab2 content...
+		</tab>
+		<tab name="Tab3">
+			Tab3 content...
+		</tab>
+	</tabs>
+
+	<div class="tab">
+		<ul>
+			<li class="active">
+				Tab1
+			</li>
+			<li class="">
+				Tab2
+			</li>
+			<li class="">
+				Tab3
+			</li>
+		</ul>
+
+		<div class="details">
+			<div> Tab1 content... <button>btn1</button></div>
+			<div></div>
+			<div></div>
+
+		</div>
 	</div>
 
-	<script type="text/javascript" src="vue.js" ></script>
-	<script type="text/javascript">
-		Vue.component("modal", {
-		   template: `
-			<div class="modal">
-				<div class="modalContent" >
-					<div class="modalHeader">
-						<slot name="header"></slot>
-					</div>
-					<div class="modalBody">
-						<slot name="body"></slot>
-					</div>
-					<div class="modalFooter">
-						<button @click="$emit('onsave')">Save</button>
-						<button>Cancel</button>
-					</div>
-				</div>
-			</div>
-		`,
-			props: ["title","content"],
-			data: function () {
-				return {
-				    show:true
-				}
-            }
-		});
-	 var app= new Vue({
-		el:  "#root",
-		data:{
-		    showLogin: false
-		}
-     });
 
-	</script>
-	<a href="Part-13.html">Part-13</a>
+
+</div>
+
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript" src="components.js"></script>
+<script type="text/javascript">
+
+    var app = new Vue({
+        el: "#root",
+        data: {
+            activeTabName: "Tab1"
+        }
+    });
+
+</script>
+<a href="Part-14.html">Part-14</a>
 
 </body>
 </html>

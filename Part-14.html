@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Js Bangla Tutorial</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		.foo{
+			background: #00fa00;
+			text-align: center;
+			width: 960px;
+			margin: 44px auto;
+			min-height: 222px;
+		}
+		.bar-enter-active, .bar-leave-active{
+			transition: transform .5s ;
+		}
+		.bar-enter, .bar-leave-to{
+			transform: rotate(-180deg);
+		}
+	</style>
+</head>
+<body>
+
+	<div id="root">
+			<button @click="show = !show">Toggle</button>
+		<transition name="bar">
+			<div class="foo" v-show="show">
+				<p>Hello World</p>
+			</div>
+		</transition>
+	</div>
+
+<script type="text/javascript" src="vue.js"></script>
+
+<script type="text/javascript">
+
+    var app = new Vue({
+        el: "#root",
+        data: {
+            show: false
+        }
+    });
+
+</script>
+<a href="Part-14.2.html">Part-14.2</a>
+
+</body>
+</html>
