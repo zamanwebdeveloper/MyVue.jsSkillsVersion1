@@ -2,7 +2,7 @@
   "name": "my-project",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "Syed Zaman Mostafiz <zamanwebdeveloper>",
+  "author": "Syed Zaman Mostafiz <zamanwebdeveloper@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
