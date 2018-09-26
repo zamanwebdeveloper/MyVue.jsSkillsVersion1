@@ -7,11 +7,8 @@
 <body>
     <h1>Welcome to Learn Hunter</h1>
     <div id="root">
-        <ul>
-            <li v-for="learnhunter in learnhunters" v-if="learnhunter.topics>3">
-                {{learnhunter.name}}({{learnhunter.topics}})
-            </li>
-        </ul>
+        <span v-if="name">Learn Hunter</span>
+        <span v-else>Kaktarua</span>
     </div>
 
 
@@ -22,13 +19,7 @@
         var app = new Vue({
             el:'#root',
             data:{
-                learnhunters:[
-                    {name: "laravel", topics:6},
-                    {name: "codeingniter",topics:4},
-                    {name: "ruby on rails",topics:6},
-                    {name: "python", topics:3},
-                    {name: "golanguage", topics:1}
-                    ]
+                name:true
             }
         })
     </script>
