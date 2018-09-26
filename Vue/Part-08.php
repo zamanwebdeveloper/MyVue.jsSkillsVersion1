@@ -8,7 +8,7 @@
     <h1>Welcome to Learn Hunter</h1>
     <div id="root">
         <ul>
-            <li v-for="learnhunter in learnhunters">
+            <li v-for="learnhunter in learnhunters" v-if="learnhunter.topics>3">
                 {{learnhunter.name}}({{learnhunter.topics}})
             </li>
         </ul>
