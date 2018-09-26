@@ -14,6 +14,9 @@
         {{welcome}}
     </div>
 
+
+    <a href="Part-03.php">Part-03</a>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
     <script>
         new Vue({
