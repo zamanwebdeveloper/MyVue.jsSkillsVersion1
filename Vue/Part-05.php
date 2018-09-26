@@ -7,11 +7,10 @@
 <body>
     <h1>Welcome to Learn Hunter</h1>
     <div id="root">
-        <input type="text" v-model="fruit">
+        <a target="_blank" :href="Topic.url" :title="Topic.title">{{Topic.name}}</a>
         <br>
         <br>
-        {{fruit}}
-
+        <a target="_blank" :href="Topic2.url" :title="Topic2.title">{{Topic2.name}}</a>
     </div>
 
 
@@ -22,7 +21,13 @@
         var app = new Vue({
             el:'#root',
             data:{
-                fruit:'Mengo'
+                Topic:{
+                    name: "Vue Js", title: "This is Framework", url:"https://github.com/zamanwebdeveloper?tab=repositories"
+                },
+                Topic2:{
+                    name: "ZamanStore", title: "This is My Website", url:"https://github.com/zamanwebdeveloper/zamanstore.ml"
+                }
+
             }
         })
     </script>
